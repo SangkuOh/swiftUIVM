@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContainerServiceKey: EnvironmentKey {
 	static let defaultValue: ContainerService = ContainerServiceLive()
-	static let mock: ContainerService = ContainerServiceMock()
 }
 
 extension EnvironmentValues {
@@ -20,7 +19,7 @@ extension EnvironmentValues {
 }
 
 extension View {
-	func containerService(_ containerService: ContainerService) -> some View {
-		environment(\.containerService, containerService)
+	func containerServiceMock() -> some View {
+		environment(\.containerService, ContainerServiceMock())
 	}
 }
