@@ -21,7 +21,7 @@ struct StringContainer: Container {
 
 	subscript(i: Int) -> Item { items[i] }
 
-	mutating func toDomain(_ response: StringItemDTO) {
+	mutating func toDomain(_ response: StringItemResponse) {
 		items = response.items
 	}
 }

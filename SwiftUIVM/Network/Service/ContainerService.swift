@@ -8,19 +8,19 @@
 import Foundation
 
 protocol ContainerService {
-	func getStringContainer() async -> Result<StringItemDTO, RequestError>
+	func getStringContainer() async -> Result<StringItemResponse, RequestError>
 }
 
 struct ContainerServiceLive: ContainerService {
-	func getStringContainer() async -> Result<StringItemDTO, RequestError> {
+	func getStringContainer() async -> Result<StringItemResponse, RequestError> {
 		.success(.init(items: ["라이브"]))
 	}
 }
 
 struct ContainerServiceMock: ContainerService {
-	let getStringContainerResult: Result<StringItemDTO, RequestError> = .failure(.noResponse)
+	let getStringContainerResult: Result<StringItemResponse, RequestError> = .failure(.noResponse)
 
-	func getStringContainer() async -> Result<StringItemDTO, RequestError> {
+	func getStringContainer() async -> Result<StringItemResponse, RequestError> {
 		getStringContainerResult
 	}
 }

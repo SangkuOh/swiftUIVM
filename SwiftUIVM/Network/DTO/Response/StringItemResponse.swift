@@ -5,6 +5,6 @@
 //  Created by sangku on 2022/11/25.
 //
 
-struct StringItemDTO: Codable {
+struct StringItemResponse: Codable {
 	var items: [String] = []
 }
