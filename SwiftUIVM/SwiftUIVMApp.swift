@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SwiftUIVMApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@StateObject var store: AppStore = .init()
+	@StateObject var navigation: NavigationStore = .init()
+
+	var body: some Scene {
+		WindowGroup {
+			MainView()
+				.environmentObject(store)
+				.environmentObject(navigation)
+				.onOpenURL {
+					navigation.checkLink($0)
+				}
+		}
+	}
 }

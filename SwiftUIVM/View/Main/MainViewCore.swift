@@ -5,7 +5,7 @@
 //  Created by sangku on 2022/11/25.
 //
 
-extension ContentView {
+extension MainView {
 	func getContainer() async {
 		let response = await containerService.getStringContainer()
 		switch response {

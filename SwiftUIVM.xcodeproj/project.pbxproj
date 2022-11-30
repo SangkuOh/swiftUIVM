@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB534192937082F00AAB7F8 /* SubView.swift */; };
+		ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341C293708E300AAB7F8 /* NavigationStore.swift */; };
+		ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341E29370B6000AAB7F8 /* AppStore.swift */; };
+		ADB5342129370F9C00AAB7F8 /* SecondSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5342029370F9C00AAB7F8 /* SecondSubView.swift */; };
 		ADD5EBB329305DBC00FC8B15 /* SwiftUIVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBB229305DBC00FC8B15 /* SwiftUIVMApp.swift */; };
-		ADD5EBB529305DBC00FC8B15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBB429305DBC00FC8B15 /* ContentView.swift */; };
+		ADD5EBB529305DBC00FC8B15 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBB429305DBC00FC8B15 /* MainView.swift */; };
 		ADD5EBB729305DBD00FC8B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD5EBB629305DBD00FC8B15 /* Assets.xcassets */; };
 		ADD5EBBB29305DBD00FC8B15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD5EBBA29305DBD00FC8B15 /* Preview Assets.xcassets */; };
 		ADD5EBC429305DDF00FC8B15 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBC329305DDF00FC8B15 /* Container.swift */; };
 		ADD5EBC629305DFA00FC8B15 /* StringContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBC529305DFA00FC8B15 /* StringContainer.swift */; };
 		ADD5EBCA29305E1E00FC8B15 /* StringItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBC929305E1E00FC8B15 /* StringItemDTO.swift */; };
 		ADD5EBCD29305E7500FC8B15 /* ContainerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBCC29305E7500FC8B15 /* ContainerService.swift */; };
-		ADD5EBD02930624100FC8B15 /* ContentViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBCF2930624100FC8B15 /* ContentViewExtension.swift */; };
+		ADD5EBD02930624100FC8B15 /* MainViewCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBCF2930624100FC8B15 /* MainViewCore.swift */; };
 		ADD5EBD3293063B400FC8B15 /* ContainerServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBD2293063B400FC8B15 /* ContainerServiceKey.swift */; };
 		ADD5EBD62930774000FC8B15 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBD52930774000FC8B15 /* Endpoint.swift */; };
 		ADD5EBD82930776600FC8B15 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBD72930776600FC8B15 /* HTTPClient.swift */; };
@@ -26,9 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADB534192937082F00AAB7F8 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		ADB5341C293708E300AAB7F8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
+		ADB5341E29370B6000AAB7F8 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		ADB5342029370F9C00AAB7F8 /* SecondSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSubView.swift; sourceTree = "<group>"; };
+		ADB5342229371DB500AAB7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ADD5EBAF29305DBC00FC8B15 /* SwiftUIVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD5EBB229305DBC00FC8B15 /* SwiftUIVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVMApp.swift; sourceTree = "<group>"; };
-		ADD5EBB429305DBC00FC8B15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADD5EBB429305DBC00FC8B15 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ADD5EBB629305DBD00FC8B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD5EBB829305DBD00FC8B15 /* SwiftUIVM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIVM.entitlements; sourceTree = "<group>"; };
 		ADD5EBBA29305DBD00FC8B15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -36,7 +45,7 @@
 		ADD5EBC529305DFA00FC8B15 /* StringContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringContainer.swift; sourceTree = "<group>"; };
 		ADD5EBC929305E1E00FC8B15 /* StringItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringItemDTO.swift; sourceTree = "<group>"; };
 		ADD5EBCC29305E7500FC8B15 /* ContainerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerService.swift; sourceTree = "<group>"; };
-		ADD5EBCF2930624100FC8B15 /* ContentViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewExtension.swift; sourceTree = "<group>"; };
+		ADD5EBCF2930624100FC8B15 /* MainViewCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCore.swift; sourceTree = "<group>"; };
 		ADD5EBD2293063B400FC8B15 /* ContainerServiceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerServiceKey.swift; sourceTree = "<group>"; };
 		ADD5EBD52930774000FC8B15 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		ADD5EBD72930776600FC8B15 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -57,6 +66,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADB534172937081600AAB7F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ADD5EBB429305DBC00FC8B15 /* MainView.swift */,
+				ADD5EBCF2930624100FC8B15 /* MainViewCore.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ADB534182937081E00AAB7F8 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				ADB534192937082F00AAB7F8 /* SubView.swift */,
+				ADB5342029370F9C00AAB7F8 /* SecondSubView.swift */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		ADB5341B293708D900AAB7F8 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				ADB5341C293708E300AAB7F8 /* NavigationStore.swift */,
+				ADB5341E29370B6000AAB7F8 /* AppStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		ADD5EBA629305DBC00FC8B15 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +112,8 @@
 		ADD5EBB129305DBC00FC8B15 /* SwiftUIVM */ = {
 			isa = PBXGroup;
 			children = (
+				ADB5342229371DB500AAB7F8 /* Info.plist */,
+				ADB5341B293708D900AAB7F8 /* Store */,
 				ADD5EBD1293063A800FC8B15 /* Environment */,
 				ADD5EBC129305DC600FC8B15 /* Protocol */,
 				ADD5EBC229305DD400FC8B15 /* Model */,
@@ -143,8 +181,8 @@
 		ADD5EBCE2930622000FC8B15 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADD5EBB429305DBC00FC8B15 /* ContentView.swift */,
-				ADD5EBCF2930624100FC8B15 /* ContentViewExtension.swift */,
+				ADB534182937081E00AAB7F8 /* Sub */,
+				ADB534172937081600AAB7F8 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,17 +294,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD5EBDE2930779500FC8B15 /* RequestMethod.swift in Sources */,
-				ADD5EBB529305DBC00FC8B15 /* ContentView.swift in Sources */,
+				ADD5EBB529305DBC00FC8B15 /* MainView.swift in Sources */,
 				ADD5EBDA2930777900FC8B15 /* Logger.swift in Sources */,
 				ADD5EBD62930774000FC8B15 /* Endpoint.swift in Sources */,
 				ADD5EBC429305DDF00FC8B15 /* Container.swift in Sources */,
 				ADD5EBCA29305E1E00FC8B15 /* StringItemDTO.swift in Sources */,
 				ADD5EBCD29305E7500FC8B15 /* ContainerService.swift in Sources */,
-				ADD5EBD02930624100FC8B15 /* ContentViewExtension.swift in Sources */,
+				ADD5EBD02930624100FC8B15 /* MainViewCore.swift in Sources */,
+				ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */,
 				ADD5EBD82930776600FC8B15 /* HTTPClient.swift in Sources */,
+				ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */,
 				ADD5EBDC2930778800FC8B15 /* RequestError.swift in Sources */,
 				ADD5EBD3293063B400FC8B15 /* ContainerServiceKey.swift in Sources */,
 				ADD5EBE22930788700FC8B15 /* ContainerEndpoint.swift in Sources */,
+				ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */,
+				ADB5342129370F9C00AAB7F8 /* SecondSubView.swift in Sources */,
 				ADD5EBC629305DFA00FC8B15 /* StringContainer.swift in Sources */,
 				ADD5EBB329305DBC00FC8B15 /* SwiftUIVMApp.swift in Sources */,
 			);
@@ -401,6 +443,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIVM/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -439,6 +482,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIVM/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
