@@ -7,13 +7,10 @@
 
 import Foundation
 
-protocol Container {
+protocol Container: Domain {
 	associatedtype Item
-	associatedtype Response
 
 	mutating func append(_ item: Item)
 	var count: Int { get }
 	subscript(i: Int) -> Item { get }
-
-	mutating func toDomain(_ response: Response)
 }
