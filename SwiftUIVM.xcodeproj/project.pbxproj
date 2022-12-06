@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA95D6B293F1400006436CF /* Extension+View.swift */; };
 		ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB534192937082F00AAB7F8 /* SubView.swift */; };
 		ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341C293708E300AAB7F8 /* NavigationStore.swift */; };
 		ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341E29370B6000AAB7F8 /* AppStore.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADA95D6B293F1400006436CF /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		ADB534192937082F00AAB7F8 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		ADB5341C293708E300AAB7F8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
 		ADB5341E29370B6000AAB7F8 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
@@ -68,6 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADA95D69293F13DE006436CF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ADA95D6A293F13F2006436CF /* Extension */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		ADA95D6A293F13F2006436CF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ADA95D6B293F1400006436CF /* Extension+View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		ADB534172937081600AAB7F8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +133,12 @@
 			isa = PBXGroup;
 			children = (
 				ADB5342229371DB500AAB7F8 /* Info.plist */,
-				ADB5341B293708D900AAB7F8 /* Store */,
 				ADD5EBD1293063A800FC8B15 /* Environment */,
+				ADB5341B293708D900AAB7F8 /* Store */,
+				ADD5EBC729305E0800FC8B15 /* Network */,
+				ADA95D69293F13DE006436CF /* Utility */,
 				ADD5EBC129305DC600FC8B15 /* Protocol */,
 				ADD5EBC229305DD400FC8B15 /* Model */,
-				ADD5EBC729305E0800FC8B15 /* Network */,
 				ADD5EBCE2930622000FC8B15 /* View */,
 				ADD5EBB229305DBC00FC8B15 /* SwiftUIVMApp.swift */,
 				ADD5EBB629305DBD00FC8B15 /* Assets.xcassets */,
@@ -308,6 +327,7 @@
 				ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */,
 				ADD5EBD82930776600FC8B15 /* HTTPClient.swift in Sources */,
 				ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */,
+				ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */,
 				ADD5EBDC2930778800FC8B15 /* RequestError.swift in Sources */,
 				ADD5EBD3293063B400FC8B15 /* ContainerServiceKey.swift in Sources */,
 				ADD5EBE22930788700FC8B15 /* ContainerEndpoint.swift in Sources */,

@@ -17,9 +17,3 @@ extension EnvironmentValues {
 		set { self[ContainerServiceKey.self]  = newValue }
 	}
 }
-
-extension View {
-	func containerServiceMock() -> some View {
-		environment(\.containerService, ContainerServiceMock())
-	}
-}
