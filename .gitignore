@@ -51,6 +51,7 @@ xcuserdata/
 
 ### Xcode Patch ###
 *.xcodeproj/*
+*.xcuserstate
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
@@ -59,4 +60,4 @@ xcuserdata/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swiftpackagemanager
-SwiftUIVM.xcodeproj/project.xcworkspace/xcuserdata/sangku.xcuserdatad/UserInterfaceState.xcuserstate
+
