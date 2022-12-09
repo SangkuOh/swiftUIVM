@@ -55,6 +55,14 @@ struct MainView_Previews: PreviewProvider {
 		MainView()
 			.environmentObject(AppStore())
 			.environmentObject(NavigationStore())
-		//					.containerServiceMock()
+			.containerServiceMock(
+				.init(
+					getStringContainerResult: .success(
+						.init(
+							items: ["하나", "둘", "셋", "넷"]
+						)
+					)
+				)
+			)
 	}
 }

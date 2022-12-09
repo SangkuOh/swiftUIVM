@@ -18,7 +18,13 @@ struct ContainerServiceLive: ContainerService {
 }
 
 struct ContainerServiceMock: ContainerService {
-	let getStringContainerResult: Result<StringItemResponse, RequestError> = .failure(.noResponse)
+	let getStringContainerResult: Result<StringItemResponse, RequestError>
+
+	init (
+		getStringContainerResult: Result<StringItemResponse, RequestError> = .failure(.noResponse)
+	) {
+		self.getStringContainerResult = getStringContainerResult
+	}
 
 	func getStringContainer() async -> Result<StringItemResponse, RequestError> {
 		getStringContainerResult

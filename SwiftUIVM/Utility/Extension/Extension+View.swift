@@ -9,7 +9,7 @@ import SwiftUI
 
 //MARK: Environment
 extension View {
-	func containerServiceMock() -> some View {
-		environment(\.containerService, ContainerServiceMock())
+	func containerServiceMock(_ containerService: ContainerServiceMock = .init()) -> some View {
+		environment(\.containerService, containerService)
 	}
 }
