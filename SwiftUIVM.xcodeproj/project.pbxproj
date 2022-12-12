@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD02AB092946E13700310079 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02AB082946E13700310079 /* Extension+Data.swift */; };
 		ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA95D6B293F1400006436CF /* Extension+View.swift */; };
 		ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB534192937082F00AAB7F8 /* SubView.swift */; };
 		ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341C293708E300AAB7F8 /* NavigationStore.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD02AB082946E13700310079 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
 		ADA95D6B293F1400006436CF /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		ADB534192937082F00AAB7F8 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		ADB5341C293708E300AAB7F8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				ADA95D6B293F1400006436CF /* Extension+View.swift */,
+				AD02AB082946E13700310079 /* Extension+Data.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				ADD5EBCD29305E7500FC8B15 /* ContainerService.swift in Sources */,
 				ADD5EBD02930624100FC8B15 /* MainViewCore.swift in Sources */,
 				ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */,
+				AD02AB092946E13700310079 /* Extension+Data.swift in Sources */,
 				ADD5EBD82930776600FC8B15 /* HTTPClient.swift in Sources */,
 				ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */,
 				ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */,

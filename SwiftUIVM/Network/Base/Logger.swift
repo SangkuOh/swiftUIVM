@@ -6,16 +6,28 @@
 //
 import Foundation
 
+import Foundation
+
 class NetworkLogger {
 	static func log(request: URLRequest) {
-		print("\n\n - - - - - - - - - - [[ 🙏🏻🙏🏻🙏🏻🙏🏻 URLRequest 🙏🏻🙏🏻🙏🏻🙏🏻 ]] - - - - - - - - - - \n")
+		print("\n\n - - - - - - - - - - [[ ⬆️⬆️⬆️ URLRequest Log Start ⬆️⬆️⬆️ ]] - - - - - - - - - - \n")
 
-		let urlAsString = request.url?.absoluteString ?? ""
+		guard
+			let urlAsString = request.url?.absoluteString,
+			let method = request.httpMethod else {
+			return
+		}
+
 		let urlComponents = URLComponents(string: urlAsString)
-		let method = request.httpMethod != nil ? "\(request.httpMethod ?? "")" : ""
-		let path = "\(urlComponents?.path ?? "")"
-		let query = "\(urlComponents?.query ?? "")"
-		let host = "\(urlComponents?.host ?? "")"
+
+		guard
+			let host = urlComponents?.host,
+			let path = urlComponents?.path else {
+			return
+		}
+
+		let query = urlComponents?.query ?? ""
+
 		var output = """
 			\(urlAsString)
 			\(method) \(path)?\(query) HTTP/1.1
@@ -29,11 +41,7 @@ class NetworkLogger {
 
 		output += "\n-- Request Body --\n"
 		if let body = request.httpBody {
-			if let bodyStr = String(data: body, encoding: .utf8) {
-				output += "\(bodyStr)"
-			} else {
-				output += "\(body)"
-			}
+			output += body.prettyPrintedJSONString
 		} else {
 			output += "NONE"
 		}
@@ -42,21 +50,26 @@ class NetworkLogger {
 	}
 
 	static func log(response: HTTPURLResponse?, data: Data?, error: Error? = nil) {
-		print("\n\n - - - - - - - - - - [[ 🎉🎉🎉🎉 URLResponse 🎉🎉🎉🎉 ]] - - - - - - - - - - \n")
+		print("\n\n - - - - - - - - - - [[ ⬇️⬇️⬇️ URLResponse Log Start ⬇️⬇️⬇️ ]] - - - - - - - - - - \n")
 
-		let urlString = response?.url?.absoluteString
-		let components = NSURLComponents(string: urlString ?? "")
-		let path = "\(components?.path ?? "")"
-		let query = "\(components?.query ?? "")"
+		guard
+			let urlString = response?.url?.absoluteString,
+			let components = URLComponents(string: urlString) else {
+			return
+		}
+
+		let path = components.path
+		let query = components.query ?? ""
 		var output = ""
 
 		if let statusCode = response?.statusCode {
-			output += "HTTP \(statusCode) \(path)?\(query)\n"
+			let emoji = statusCode == 200 ? "✅" : "🚨"
+			output += "\(emoji) HTTP \(statusCode) \(path)?\(query)\n"
 		}
 
 		if let data {
 			output += "\n-- Response body --\n"
-			output += "\(String(data: data, encoding: .utf8) ?? "")"
+			output += data.prettyPrintedJSONString
 		}
 
 		if let error {
