@@ -33,7 +33,8 @@ extension HTTPClient {
 		request.allHTTPHeaderFields = endpoint.header
 
 		if let body = endpoint.body {
-			request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+			let jsonData = request.encoded(encodable: body)
+			request.httpBody = jsonData
 		}
 
 		NetworkLogger.log(request: request)
@@ -63,4 +64,3 @@ extension HTTPClient {
 		}
 	}
 }
-
