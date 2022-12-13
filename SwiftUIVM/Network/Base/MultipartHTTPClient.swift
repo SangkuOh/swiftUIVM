@@ -36,7 +36,10 @@ extension MultipartHTTPClient {
 		request.httpMethod = endpoint.method.rawValue
 
 		let boundary = "Boundary-\(UUID().uuidString)"
-		request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+		request.setValue(
+			"multipart/form-data; boundary=\(boundary)",
+			forHTTPHeaderField: "Content-Type"
+		)
 
 		var httpBody = Data()
 		if let body = endpoint.body as? Parameters {
@@ -78,7 +81,9 @@ extension MultipartHTTPClient {
 			}
 			switch response.statusCode {
 			case 200...299:
-				guard let decodedResponse = try? JSONDecoder().decode(responseModel, from: data) else {
+				guard
+					let decodedResponse = try? JSONDecoder().decode(responseModel, from: data)
+				else {
 					return .failure(.decode)
 				}
 				return .success(decodedResponse)
@@ -126,13 +131,5 @@ extension MultipartHTTPClient {
 		data.appendString("\r\n")
 
 		return data
-	}
-}
-
-extension Data {
-	mutating func appendString(_ string: String) {
-		if let data = string.data(using: .utf8) {
-			self.append(data)
-		}
 	}
 }
