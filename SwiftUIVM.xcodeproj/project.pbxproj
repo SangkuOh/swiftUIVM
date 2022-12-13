@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD02AB092946E13700310079 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02AB082946E13700310079 /* Extension+Data.swift */; };
+		AD92D2CD2948088D004457E1 /* MultipartHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */; };
 		ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA95D6B293F1400006436CF /* Extension+View.swift */; };
 		ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB534192937082F00AAB7F8 /* SubView.swift */; };
 		ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341C293708E300AAB7F8 /* NavigationStore.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		AD02AB082946E13700310079 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
+		AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartHTTPClient.swift; sourceTree = "<group>"; };
 		ADA95D6B293F1400006436CF /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		ADB534192937082F00AAB7F8 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		ADB5341C293708E300AAB7F8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				ADD5EBD52930774000FC8B15 /* Endpoint.swift */,
 				ADD5EBD72930776600FC8B15 /* HTTPClient.swift */,
+				AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */,
 				ADD5EBD92930777900FC8B15 /* Logger.swift */,
 				ADD5EBDB2930778800FC8B15 /* RequestError.swift */,
 				ADD5EBDD2930779500FC8B15 /* RequestMethod.swift */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD5EBDE2930779500FC8B15 /* RequestMethod.swift in Sources */,
+				AD92D2CD2948088D004457E1 /* MultipartHTTPClient.swift in Sources */,
 				ADD5EBB529305DBC00FC8B15 /* MainView.swift in Sources */,
 				ADD5EBDA2930777900FC8B15 /* Logger.swift in Sources */,
 				ADD5EBD62930774000FC8B15 /* Endpoint.swift in Sources */,
