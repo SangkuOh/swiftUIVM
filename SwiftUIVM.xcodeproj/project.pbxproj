@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD02AB092946E13700310079 /* Extension+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02AB082946E13700310079 /* Extension+Data.swift */; };
+		AD92D2CD2948088D004457E1 /* MultipartHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */; };
 		ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA95D6B293F1400006436CF /* Extension+View.swift */; };
 		ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB534192937082F00AAB7F8 /* SubView.swift */; };
 		ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5341C293708E300AAB7F8 /* NavigationStore.swift */; };
@@ -30,10 +31,14 @@
 		ADD5EBDC2930778800FC8B15 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBDB2930778800FC8B15 /* RequestError.swift */; };
 		ADD5EBDE2930779500FC8B15 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBDD2930779500FC8B15 /* RequestMethod.swift */; };
 		ADD5EBE22930788700FC8B15 /* ContainerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5EBE12930788700FC8B15 /* ContainerEndpoint.swift */; };
+		ADEE764629484B82001C0518 /* TestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEE764529484B82001C0518 /* TestRequest.swift */; };
+		ADEE764D29486E2C001C0518 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEE764C29486E2C001C0518 /* AnyEncodable.swift */; };
+		ADEE764F29486E79001C0518 /* Extension+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEE764E29486E79001C0518 /* Extension+URLRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD02AB082946E13700310079 /* Extension+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Data.swift"; sourceTree = "<group>"; };
+		AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartHTTPClient.swift; sourceTree = "<group>"; };
 		ADA95D6B293F1400006436CF /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		ADB534192937082F00AAB7F8 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
 		ADB5341C293708E300AAB7F8 /* NavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStore.swift; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		ADD5EBDB2930778800FC8B15 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		ADD5EBDD2930779500FC8B15 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		ADD5EBE12930788700FC8B15 /* ContainerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerEndpoint.swift; sourceTree = "<group>"; };
+		ADEE764529484B82001C0518 /* TestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequest.swift; sourceTree = "<group>"; };
+		ADEE764C29486E2C001C0518 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		ADEE764E29486E79001C0518 /* Extension+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URLRequest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 			children = (
 				ADA95D6B293F1400006436CF /* Extension+View.swift */,
 				AD02AB082946E13700310079 /* Extension+Data.swift */,
+				ADEE764E29486E79001C0518 /* Extension+URLRequest.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				ADD5EBC529305DFA00FC8B15 /* StringContainer.swift */,
+				ADEE764C29486E2C001C0518 /* AnyEncodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 		ADD5EBC829305E1200FC8B15 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				ADEE764429484B72001C0518 /* Reqeust */,
 				ADD5EBDF2930786800FC8B15 /* Response */,
 			);
 			path = DTO;
@@ -225,6 +236,7 @@
 			children = (
 				ADD5EBD52930774000FC8B15 /* Endpoint.swift */,
 				ADD5EBD72930776600FC8B15 /* HTTPClient.swift */,
+				AD92D2CC2948088D004457E1 /* MultipartHTTPClient.swift */,
 				ADD5EBD92930777900FC8B15 /* Logger.swift */,
 				ADD5EBDB2930778800FC8B15 /* RequestError.swift */,
 				ADD5EBDD2930779500FC8B15 /* RequestMethod.swift */,
@@ -248,6 +260,14 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
+		ADEE764429484B72001C0518 /* Reqeust */ = {
+			isa = PBXGroup;
+			children = (
+				ADEE764529484B82001C0518 /* TestRequest.swift */,
+			);
+			path = Reqeust;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +284,8 @@
 			dependencies = (
 			);
 			name = SwiftUIVM;
+			packageProductDependencies = (
+			);
 			productName = SwiftUIVM;
 			productReference = ADD5EBAF29305DBC00FC8B15 /* SwiftUIVM.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +314,8 @@
 				Base,
 			);
 			mainGroup = ADD5EBA629305DBC00FC8B15;
+			packageReferences = (
+			);
 			productRefGroup = ADD5EBB029305DBC00FC8B15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD5EBDE2930779500FC8B15 /* RequestMethod.swift in Sources */,
+				AD92D2CD2948088D004457E1 /* MultipartHTTPClient.swift in Sources */,
 				ADD5EBB529305DBC00FC8B15 /* MainView.swift in Sources */,
 				ADD5EBDA2930777900FC8B15 /* Logger.swift in Sources */,
 				ADD5EBD62930774000FC8B15 /* Endpoint.swift in Sources */,
@@ -327,13 +352,16 @@
 				ADD5EBCA29305E1E00FC8B15 /* StringItemResponse.swift in Sources */,
 				ADD5EBCD29305E7500FC8B15 /* ContainerService.swift in Sources */,
 				ADD5EBD02930624100FC8B15 /* MainViewCore.swift in Sources */,
+				ADEE764D29486E2C001C0518 /* AnyEncodable.swift in Sources */,
 				ADB5341F29370B6000AAB7F8 /* AppStore.swift in Sources */,
 				AD02AB092946E13700310079 /* Extension+Data.swift in Sources */,
 				ADD5EBD82930776600FC8B15 /* HTTPClient.swift in Sources */,
 				ADB5341A2937082F00AAB7F8 /* SubView.swift in Sources */,
 				ADA95D6C293F1400006436CF /* Extension+View.swift in Sources */,
+				ADEE764F29486E79001C0518 /* Extension+URLRequest.swift in Sources */,
 				ADD5EBDC2930778800FC8B15 /* RequestError.swift in Sources */,
 				ADD5EBD3293063B400FC8B15 /* ContainerServiceKey.swift in Sources */,
+				ADEE764629484B82001C0518 /* TestRequest.swift in Sources */,
 				ADD5EBE22930788700FC8B15 /* ContainerEndpoint.swift in Sources */,
 				ADB5341D293708E300AAB7F8 /* NavigationStore.swift in Sources */,
 				ADB5342129370F9C00AAB7F8 /* SecondSubView.swift in Sources */,

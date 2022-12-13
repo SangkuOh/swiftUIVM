@@ -17,3 +17,15 @@ extension EnvironmentValues {
 		set { self[ContainerServiceKey.self]  = newValue }
 	}
 }
+
+
+struct ImageServiceKey: EnvironmentKey {
+	static let defaultValue: ImageService = ImageServiceLive()
+}
+
+extension EnvironmentValues {
+	var imageService: ImageService {
+		get { self[ImageServiceKey.self] }
+		set { self[ImageServiceKey.self]  = newValue }
+	}
+}

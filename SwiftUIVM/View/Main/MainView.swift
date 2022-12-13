@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct MainView: View {
 	// Dependency
 	@Environment(\.containerService) var containerService
+	@Environment(\.imageService) var imageService
 
 	// Stores shared states
 	@EnvironmentObject var store: AppStore
@@ -21,21 +23,29 @@ struct MainView: View {
 	// Error
 	@State var error: RequestError? = nil
 	@State var isError: Bool = false
+	@State var photos: [PhotosPickerItem] = []
+	@State var images: [UIImage] = []
 
 	@ViewBuilder
 	var body: some View {
 		NavigationStack(path: $navigation.subviewPath) {
-			List(container.items, id: \.self) {
-				NavigationLink
-					.init($0, value: NavigationType.first($0))
+			PhotosPicker("Photos", selection: $photos)
+				.buttonStyle(.borderedProminent)
+			Button {
+				Task {
+					await imageService.sendImage(images: self.images)
+				}
+			} label: {
+				Text("Send Test")
 			}
-			.navigationDestination(for: NavigationType.self) { type in
-				switch type {
-				case let .first(item):
-					SubView(item: item)
-
-				case let .second(item):
-					SecondSubView(item: item)
+			List(images, id: \.self) { uiImage in
+				if let uiImage = uiImage {
+					Image
+						.init(uiImage: uiImage)
+						.resizable()
+						.scaledToFit()
+				} else {
+					Text("empty")
 				}
 			}
 			.navigationTitle("Main")
@@ -46,6 +56,24 @@ struct MainView: View {
 				title: .init("Error"),
 				message: .init(error?.customMessage ?? "no message")
 			)
+		}
+		.onChange(of: photos) { newValue in
+			newValue.forEach {
+				$0.loadTransferable(type: Data.self) { result in
+					switch result {
+					case .success(let imageData):
+						guard
+							let imageData = imageData,
+							let uiImage = UIImage(data: imageData)
+						else {
+							return
+						}
+						self.images.append(uiImage)
+					case .failure:
+						return
+					}
+				}
+			}
 		}
 	}
 }

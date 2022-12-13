@@ -5,8 +5,11 @@
 //  Created by sangku on 2022/11/25.
 //
 
+import Foundation
+
 enum ContainerEndpoint {
 	case string(String)
+	case test(TestRequest)
 }
 
 extension ContainerEndpoint: Endpoint {
@@ -14,6 +17,9 @@ extension ContainerEndpoint: Endpoint {
 		switch self {
 		case .string(let word):
 			return "/string/\(word)"
+
+		case .test:
+			return "/string/"
 		}
 	}
 
@@ -21,24 +27,28 @@ extension ContainerEndpoint: Endpoint {
 		switch self {
 		case .string:
 			return .get
+
+		case .test:
+			return .post
 		}
 	}
 
 	var header: [String: String]? {
-		let token = "token"
 		switch self {
-		case .string:
+		default:
 			return [
-				"token": token
+				"key": "value"
 			]
 		}
 	}
 
-	var body: [String: String]? {
+	var body: Encodable? {
 		switch self {
 		case .string:
 			return nil
+
+		case .test(let params):
+			return params
 		}
 	}
 }
-
