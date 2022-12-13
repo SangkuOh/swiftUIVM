@@ -39,6 +39,6 @@ protocol ImageService {
 
 struct ImageServiceLive: MultipartHTTPClient, ImageService {
 	func sendImage(images: [UIImage]) async -> Result<StringItemResponse, RequestError> {
-		await sendMultipartRequest(endpoint: ContainerEndpoint.string(""), imageDatas: images.map{ $0.jpegData(compressionQuality: 1.0)! }, responseModel: StringItemResponse.self)
+		await sendMultipartRequest(endpoint: ContainerEndpoint.string(""), images: images.map{ $0.jpegData(compressionQuality: 1.0)! }, responseModel: StringItemResponse.self)
 	}
 }

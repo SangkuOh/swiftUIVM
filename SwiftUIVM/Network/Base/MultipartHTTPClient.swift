@@ -8,9 +8,11 @@
 import Foundation
 
 protocol MultipartHTTPClient {
+	typealias Parameters = [String: String]
+
 	func sendMultipartRequest<T: Decodable>(
 		endpoint: Endpoint,
-		imageDatas: [Data],
+		images: [Data]?,
 		responseModel: T.Type
 	) async -> Result<T, RequestError>
 }
@@ -18,7 +20,7 @@ protocol MultipartHTTPClient {
 extension MultipartHTTPClient {
 	func sendMultipartRequest<T: Decodable>(
 		endpoint: Endpoint,
-		imageDatas: [Data],
+		images: [Data]? = nil,
 		responseModel: T.Type
 	) async -> Result<T, RequestError> {
 		var urlComponents = URLComponents()
@@ -37,27 +39,33 @@ extension MultipartHTTPClient {
 		request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
 		var httpBody = Data()
-
-		if let body = endpoint.body {
+		if let body = endpoint.body as? Parameters {
 			for (key, value) in body {
-				httpBody.appendString(convertFormField(named: key, value: value as! String, using: boundary))
+				httpBody.appendString(
+					convertFormField(
+						named: key,
+						value: value,
+						using: boundary
+					)
+				)
 			}
 		}
 
-		for imageData in imageDatas {
-			httpBody.append(
-				convertFileData(
-					fieldName: "file",
-					fileName: "\(Date().timeIntervalSince1970)_photo.jpg",
-					mimeType: "multipart/form-data",
-					fileData: imageData,
-					using: boundary
+		if let images = images {
+			for image in images {
+				httpBody.append(
+					convertFileData(
+						fieldName: "file",
+						fileName: "\(Date().timeIntervalSince1970)_photo.jpg",
+						mimeType: "multipart/form-data",
+						fileData: image,
+						using: boundary
+					)
 				)
-			)
+			}
 		}
 
 		httpBody.appendString("--\(boundary)--")
-
 		request.httpBody = httpBody
 
 		NetworkLogger.log(request: request)
